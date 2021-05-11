@@ -58,7 +58,9 @@ Go to your project folder in terminal then execute :
 
 ```
 rm -rf build/
+
 truffle compile
+
 truffle migrate --reset
 ```
 
