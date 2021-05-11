@@ -51,33 +51,6 @@ cd Blockchain_SupplyChain/
 ```
 **Update truffle.js **
 
-
-```
-const HDWalletProvider = require('truffle-hdwallet-provider');
-const infuraKey = "https://ropsten.infura.io/v3/3a8022cbb64b4013aebd3abe1b0414cb";
-
-module.exports = {
-
-  networks: {
-    development: {
-      host: "127.0.0.1",
-      port: 7545,
-      network_id: "*" // Match any network id
-    },
-    ropsten:{
-      provider: function(){return new HDWalletProvider("reform merry pudding tiny sign list awful approve cross genre initial nurse",infuraKey) ;},
-      network_id:'*',
-      gas:4500000,
-      gasPrice:1000000000,
-    }
-  },
-  compilers: {
-    solc: {
-      version: "0.4.24" // ex:  "0.4.20". (Default: Truffle's installed solc)
-    }
-  }
-};
-
 Change the mnemonic to your metamask wallet seedphrase and the also ropsten infura key. 
 
 ```
@@ -86,7 +59,7 @@ Go to your project folder in terminal then execute :
 ```
 rm -rf build/
 truffle compile
-truffle migrate --network ropsten reset
+truffle migrate --reset
 ```
 
 The output would look like this:
@@ -96,13 +69,15 @@ The output would look like this:
 
    Deploying 'Migrations'
    ----------------------
-   > transaction hash:    0x62af6080db7a126e50a6b23641ef7a3c695b8ecf2e10dfedc231e5f84ddefeae
-   > Blocks: 0            Seconds: 9
-   > contract address:    0x1BeccA6dc31a65029cFC5A4812A35ff42115290d
-   > account:             0x2d5faBF0533647E18dc4e96CdD447EF0045Db32B
-   > balance:             2.099711443222213392
-   > gas used:            277462
-   > gas price:           1 gwei
+   > transaction hash:    0x7dd085c13645afb916318e03a7755b05b5f5a9e5dbe5cde5a512f58251c4257f
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x09e45726261f220b9a9947a354fC40Af8856d6D1
+   > block number:        13
+   > block timestamp:     1620728966
+   > account:             0x9702b4C4d3259152acb9559E68aCF1Ad90E84683
+   > balance:             99.96338326
+   > gas used:            225237 (0x36fd5)
+   > gas price:           20 gwei
    > value sent:          0 ETH
    > total cost:          0.000277462 ETH
 
@@ -198,7 +173,7 @@ Summary
 ```
 Use the command:
 
-npm run dev 
+npm start 
 
 to run the application.
 
